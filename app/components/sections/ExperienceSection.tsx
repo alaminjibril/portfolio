@@ -6,6 +6,11 @@ import { ArrowUpRight, Download } from "lucide-react";
 
 const experiences = [
   {
+    company: "Smash Technology Limited",
+    role: "Front-end Developer",
+    period: "January 2026 → Present",
+  },
+  {
     company: "FlexiSAF EduSoft",
     role: "Front-end Developer (Intern)",
     period: "May 2025 → Aug 2025",
