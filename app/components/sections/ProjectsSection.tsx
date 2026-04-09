@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 interface ProjectPreview {
@@ -17,6 +18,7 @@ interface Project {
   tags: string[];
   description: string;
   preview: ProjectPreview;
+  link?: string;
 }
 
 const projects: Project[] = [
@@ -32,6 +34,21 @@ const projects: Project[] = [
       headline: "Your home for elegant\nnorthern fashion & culture",
       image: "/Arewacostume.png",
     },
+    link: "https://arewa-costume.vercel.app",
+  },
+  {
+    id: 2,
+    title: "Accruefy",
+    year: "'25",
+    tags: ["DEV", "NEXT.JS"],
+    description:
+      "Built a pixel-perfect frontend clone of an accounting business website, replicating clean layouts, responsive design, and professional UI elements.",
+    preview: {
+      bg: "#1a0f0a",
+      headline: "Pixel-Perfect Accounting Website Clone with Modern UI",
+      image: "/accruefy.png",
+    },
+    link: "https://accruefy.vercel.app",
   },
 ];
 
@@ -88,8 +105,8 @@ export default function ProjectsListSection() {
 
   return (
     <section className="relative bg-[#111111]">
-      {projects.map((project, index) => (
-        <div key={project.id} className="sticky top-0">
+      {projects.map((project, index) => {
+        const cardContent = (
           <motion.div
             onMouseEnter={() => setHoveredId(project.id)}
             onMouseLeave={() => setHoveredId(null)}
@@ -140,8 +157,20 @@ export default function ProjectsListSection() {
               <ProjectPreview project={project} />
             </div>
           </motion.div>
-        </div>
-      ))}
-    </section>
+        );
+
+        return (
+          <div key={project.id} className="sticky top-0">
+            {project.link ? (
+              <Link href={project.link} target="_blank" rel="noopener noreferrer" className="block focus:outline-none">
+                {cardContent}
+              </Link>
+            ) : (
+              cardContent
+            )}
+          </div>
+        );
+      })}
+      </section>
   );
 }

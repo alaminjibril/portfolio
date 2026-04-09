@@ -5,8 +5,8 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Quattro — Dark Minimal Portfolio",
-  description: "Website Designer and Brand Strategist",
+  title: "Al-Amin Jibril — Portfolio",
+  description: "Frontend Developer",
 };
 
 export default function RootLayout({

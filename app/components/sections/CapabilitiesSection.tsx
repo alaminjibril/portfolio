@@ -75,9 +75,9 @@ const CapabilitiesSection = () => {
         className="relative bg-[#0f0f0f] hidden md:block"
         style={{ height: `${capabilities.length * 100}vh` }}
       >
-        <div className="sticky top-0 h-screen overflow-hidden">
+        <div className="sticky top-0 h-screen overflow-hidden flex flex-col justify-center">
           {/* Header */}
-          <div className="absolute top-0 left-0 right-0 z-20 px-12 pt-20 pb-12">
+          <div className="w-full z-20 px-12 pb-10">
             <div className="w-full max-w-[1269px] mx-auto">
               <motion.h2
                 className="text-[40px] font-normal leading-[1.4em] tracking-[-0.04em]"
@@ -93,7 +93,7 @@ const CapabilitiesSection = () => {
           </div>
 
           {/* Horizontal Scrolling Cards */}
-          <div className="absolute inset-0 flex items-center">
+          <div className="w-full flex items-center">
             <motion.div
               ref={cardsRef}
               className="flex gap-6 px-12 will-change-transform"

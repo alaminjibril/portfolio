@@ -13,19 +13,6 @@ const AboutSection = () => {
       className="relative flex flex-col items-center justify-center w-full px-6 md:px-12 py-0 overflow-hidden"
       style={{ minHeight: "100vh", background: "#0a0a0a" }}
     >
-      {/* Red dot — desktop only, would look off in stacked mobile layout */}
-      <div
-        className="absolute z-10 hidden md:block"
-        style={{
-          left: "44%",
-          top: "52%",
-          width: "8px",
-          height: "8px",
-          borderRadius: "50%",
-          background: "#e63030",
-          transform: "translate(-50%, -50%)",
-        }}
-      />
 
       {/* Container */}
       <div
@@ -65,8 +52,7 @@ const AboutSection = () => {
               src="/images/alamin_picture.png"
               alt="Al-Amin Jibril portrait"
               fill
-              className="object-cover object-top"
-              style={{ objectPosition: "center top" }}
+              className="object-contain object-center"
             />
           </div>
 
@@ -77,7 +63,7 @@ const AboutSection = () => {
                 src="/images/alamin_picture.png"
                 alt="Al-Amin Jibril portrait"
                 fill
-                className="object-cover object-top"
+                className="object-contain object-center"
               />
             </div>
           </div>
