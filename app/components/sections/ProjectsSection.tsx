@@ -38,6 +38,20 @@ const projects: Project[] = [
   },
   {
     id: 2,
+    title: "OutmarkGTM",
+    year: "'25",
+    tags: ["DEV", "NEXT.JS", "FULLSTACK"],
+    description:
+      "Outmark GTM helps B2B companies build modern, scalable go-to-market engines by combining revenue operations, GTM engineering and business development-as-a-service. Agile and execution-focused, Outmark connects strategy, technology and automation to create predictable pipeline, improve sales efficiency, and accelerate sustainable revenue growth.",
+    preview: {
+      bg: "#1a0f0a",
+      headline: "Modern go-to-market solutions\nfor ambitious B2B companies",
+      image: "/outmarkGTM.png",
+    },
+    link: "https://www.outmarkgtm.com",
+  },
+  {
+    id: 3,
     title: "Accruefy",
     year: "'25",
     tags: ["DEV", "NEXT.JS"],
